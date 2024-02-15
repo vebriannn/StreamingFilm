@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Admin - Streaming Film</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="assets/css/font-face.css" rel="stylesheet" media="all">
+
+    <link href="../vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Main CSS-->
+    <link href="assets/css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop3 position-fixed w-100 ">
+            <div class="container-fluid d-flex justify-content-between">
+                <div class="button-navbar">
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                        aria-controls="offcanvasExample">
+                        <i class="zmdi zmdi-view-toc zmdi-hc-2x text-white"></i>
+                    </button>
+                    <div class="offcanvas offcanvas-start bg-offcanvas" tabindex="-1" id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header pt-3">
+                            <div class="account-wrap">
+                                <div class="account-item account-item--style2 clearfix js-item-menu d-sm-none d-block">
+                                    <div class="image">
+                                        <img src="assets/images/avatar-01.jpg" alt="John Doe" />
+                                    </div>
+                                    <div class="content">
+                                        <a class="js-acc-btn text-decoration-none text-white" href="#">Vebrian Dev</a>
+                                    </div>
+                                    <div class="account-dropdown js-dropdown">
+                                        <div class="info clearfix">
+                                            <div class="image">
+                                                <a href="#">
+                                                    <img src="assets/images/avatar-01.jpg" alt="John Doe" />
+                                                </a>
+                                            </div>
+                                            <div class="content">
+                                                <h5 class="name">
+                                                    <a href="#" id="href-icon">Vebrian Dev</a>
+                                                </h5>
+                                                <span class="email">yannsfullstack@example.com</span>
+                                            </div>
+                                        </div>
+                                        <div class="account-dropdown__body">
+                                            <div class="account-dropdown__item">
+                                                <a href="setting.html">
+                                                    <i class="zmdi zmdi-settings"></i>Setting</a>
+                                            </div>
+                                        </div>
+                                        <div class="account-dropdown__footer">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-power"></i>Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close"
+                                style="outline: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" viewBox="0 0 24 24">
+                                    <g fill="#ffffff">
+                                        <path
+                                            d="M16.34 9.322a1 1 0 1 0-1.364-1.463l-2.926 2.728L9.322 7.66A1 1 0 0 0 7.86 9.024l2.728 2.926l-2.927 2.728a1 1 0 1 0 1.364 1.462l2.926-2.727l2.728 2.926a1 1 0 1 0 1.462-1.363l-2.727-2.926z" />
+                                        <path fill-rule="evenodd"
+                                            d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12m11 9a9 9 0 1 1 0-18a9 9 0 0 1 0 18"
+                                            clip-rule="evenodd" />
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="offcanvas-body pt-4">
+                            <a class="js-arrow active w-100" href="#">
+                                <i class="bi bi-house-dash"></i> Dashboard
+                            </a>
+                            <a class="js-arrow w-100 pt-2" href="#">
+                                <i class="bi bi-wallet"></i>Transaksi
+                            </a>
+                            <a class="js-arrow w-100 pt-2" href="#">
+                                <i class="bi bi-pencil-square"></i> Movies
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-navbar d-none d-sm-block">
+                    <div class="account-wrap">
+                        <div class="account-item account-item--style2 clearfix js-item-menu">
+                            <div class="image">
+                                <img src="assets/images/avatar-01.jpg" alt="John Doe" />
+                            </div>
+                            <div class="content">
+                                <a class="js-acc-btn text-decoration-none text-white" href="#">Vebrian Dev</a>
+                            </div>
+                            <div class="account-dropdown js-dropdown">
+                                <div class="info clearfix">
+                                    <div class="image">
+                                        <a href="#">
+                                            <img src="assets/images/avatar-01.jpg" alt="John Doe" />
+                                        </a>
+                                    </div>
+                                    <div class="content">
+                                        <h5 class="name">
+                                            <a href="#" id="href-icon">Vebrian Dev</a>
+                                        </h5>
+                                        <span class="email">yannsfullstack@example.com</span>
+                                    </div>
+                                </div>
+                                <div class="account-dropdown__body">
+                                    <div class="account-dropdown__item">
+                                        <a href="setting.html">
+                                            <i class="zmdi zmdi-settings"></i>Setting</a>
+                                    </div>
+                                </div>
+                                <div class="account-dropdown__footer">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-power"></i>Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- PAGE CONTENT-->
+        <div class="page-content--bgf7 pt-5">
+
+            <!-- STATISTIC-->
+            <section class="statistic statistic2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="statistic__item statistic__item--blue">
+                                <h2 class="number">1,000</h2>
+                                <span class="desc">Total Pengguna</span>
+                                <div class="icon">
+                                    <i class="zmdi zmdi-account-o"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="statistic__item statistic__item--orange">
+                                <h2 class="number">740</h2>
+                                <span class="desc">Pengguna Gratis</span>
+                                <div class="icon">
+                                    <i class="zmdi zmdi-account-o"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="statistic__item statistic__item--green">
+                                <h2 class="number">260</h2>
+                                <span class="desc">Pengguna Berbayar</span>
+                                <div class="icon">
+                                    <i class="zmdi zmdi-account-o"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END STATISTIC-->
+
+            <!-- DATA TABLE-->
+            <section class="p-t-20">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="title-5 m-b-35">data table</h3>
+                            <div class="table-data__tool--lg table-data__flex table-data__flex-lg">
+                                <div class="table-data__tool-left">
+                                    <form class="au-form-icon--sm" action="" method="post">
+                                        <input class="au-input--w300 au-input--style2" type="text"
+                                            placeholder="Search Pengguna">
+                                        <button class="au-btn--submit2" type="submit">
+                                            <i class="zmdi zmdi-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                                <!-- <div class="table-data__tool-right">
+                                    <button class="au-btn au-btn-icon au-btn--green au-btn--small btn-top-small">
+                                        <i class="zmdi zmdi-plus"></i>add item
+                                    </button>
+                                </div> -->
+                            </div>
+                            <div class="table-responsive table-responsive-data2">
+                                <table class="table table-data2">
+                                    <thead>
+                                        <tr>
+                                            <th>nama</th>
+                                            <th>email</th>
+                                            <th>start subscription</th>
+                                            <th>end subscription</th>
+                                            <th>status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="tr-shadow">
+                                            <td>Vebrian Nikola S</td>
+                                            <td>
+                                                <span class="block-email">yanns@gmail.com</span>
+                                            </td>
+                                            <td class="desc">2018-09-27 02:12</td>
+                                            <td>2018-10-27 02:12</td>
+                                            <td>
+                                                <span class="status--process">Active</span>
+                                            </td>
+                                            <td>
+                                                <div class="table-data-feature d-flex justify-content-start">
+                                                    <a href="#" class="item" data-toggle="tooltip" data-placement="top"
+                                                        title="Edit">
+                                                        <i class="zmdi zmdi-edit"></i>
+                                                    </a>
+                                                    <a href="#" class="item" data-toggle="tooltip" data-placement="top"
+                                                        title="Delete">
+                                                        <i class="zmdi zmdi-delete"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END DATA TABLE-->
+
+            <!-- COPYRIGHT-->
+            <section class="p-t-60 ">
+                <div class="container-fluid bg-black">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="copyright pb-3">
+                                <p>Copyright © 2018 Colorlib. All rights reserved. Template by
+                                    <a href="https://colorlib.com">Colorlib</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END COPYRIGHT-->
+        </div>
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="../vendor/jquery-3.2.1.min.js"></script>
+
+    <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Vendor JS       -->
+    <script src="../vendor/animsition/animsition.min.js"></script>
+
+    <!-- Main JS-->
+    <script src="assets/js/index.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
