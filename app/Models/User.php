@@ -17,6 +17,8 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    protected $table = 'users';
     protected $fillable = [
         'name',
         'avatar',
@@ -27,8 +29,9 @@ class User extends Authenticatable
 
 
     // relasi ke tabel detail
-    public function detail()
+    public function detailuser()
     {
-        return $this->HasOne(Detail_user::class);
+        return $this->hasOne(DetailUser::class, 'user_id');
     }
+
 }
