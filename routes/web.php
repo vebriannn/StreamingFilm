@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::view('/', 'admin.index')->name('admin.dashboard');
+
+// Route::group(['prefix' => 'admin'], function () {
+//     Route::view('/dashboard', 'admin.index')->name('admin.dashboard');
+//     Route::view('/movies', 'admin.movies')->name('admin.movies');
+// });

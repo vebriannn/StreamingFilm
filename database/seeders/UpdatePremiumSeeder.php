@@ -3,9 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\Models\Detail_user;
+use App\Models\DetailUser;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 
 class UpdatePremiumSeeder extends Seeder
@@ -15,10 +16,21 @@ class UpdatePremiumSeeder extends Seeder
      */
     public function run(): void
     {
-        $users = User::find(1);
+
+        User::create([
+            'name' => 'Vebrians',
+            'avatar' => 'yasan.jpeg',
+            'email' => 'veb@gmail.com',
+            'password' => Hash::make('vebriannn'),
+            'role' => 'premium'
+            // 'created_at' => now(),
+            // 'updated_at' => now()
+        ]);
+
+        $users = User::OrderBy('id', 'desc')->first();
 
         if($users->role === "premium") {
-            Detail_user::create([
+            DetailUser::create([
                 'user_id' => $users->id,
                 'start_of_subscription' => now(),
                 'end_of_subscription' => now()->addMonths(1),
