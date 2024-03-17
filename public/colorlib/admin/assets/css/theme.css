@@ -288,6 +288,9 @@ section {
     .container {
         max-width: 1320px;
     }
+    .overflow-xxl-scroll {
+        overflow-y: scroll !important;
+    }
 }
 
 /*Page Objects*/

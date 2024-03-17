@@ -15,7 +15,7 @@ class Movies extends Model
         'categories',
         'small_thumbnail',
         'large_thumbnail',
-        'release_date',
+        // 'release_date',
         'about',
         'duration'
     ];

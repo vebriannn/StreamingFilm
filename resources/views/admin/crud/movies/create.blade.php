@@ -10,7 +10,7 @@
                     <h3 class="card-title">Create Movie</h3>
                 </div>
 
-                <form enctype="multipart/form-data" method="POST" action="">
+                <form enctype="multipart/form-data" method="POST" action="{{ route('admin.movies.create.store') }}">
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
@@ -28,16 +28,17 @@
                             <input type="text" class="form-control" id="movie" name="movie" placeholder="Movie"
                                 value="{{ old('movie') }}">
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label>Date:</label>
-                            <div class="input-group date" id="release-date" data-target-input="nearest">
-                                <input type="text" name="release_date" class="form-control datetimepicker-input"
-                                    data-target="#release-date" value="{{ old('release-date') }}" />
-                                <div class="input-group-append" data-target="#release-date" data-toggle="datetimepicker">
-                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                </div>
+                            <div class="input-group date" id="datetimepicker" data-target-input="nearest">
+                                <input type="text" class="form-control datetimepicker-input"
+                                    data-target="#datetimepicker" name="release_date" />
+                                <button class="btn btn-outline-secondary" type="button" data-target="#datetimepicker"
+                                    data-toggle="datetimepicker">
+                                    <i class="fa fa-calendar"></i>
+                                </button>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <label for="short-about">Casts</label>
                             <input type="text" class="form-control" id="short-about" name="casts"
@@ -62,26 +63,26 @@
                                 value="{{ old('duration') }}">
                         </div>
                         <!-- <div class="form-group">
-                                <label for="large-thumbnail">Large Thumbnail</label>
-                                <input type="file" class="form-control" name="large_thumbnail">
-                            </div> -->
+                                                                    <label for="large-thumbnail">Large Thumbnail</label>
+                                                                    <input type="file" class="form-control" name="large_thumbnail">
+                                                                </div> -->
                         <!-- <div class="form-group">
-                                <label for="short-about">Short About</label>
-                                <input type="text" class="form-control" id="short-about" name="short_about"
-                                    placeholder="Awesome Movie" value="{{ old('short_about') }}">
-                            </div> -->
+                                                                    <label for="short-about">Short About</label>
+                                                                    <input type="text" class="form-control" id="short-about" name="short_about"
+                                                                        placeholder="Awesome Movie" value="{{ old('short_about') }}">
+                                                                </div> -->
                         <div class="form-group">
                             <label for="short-about">About</label>
                             <input type="text" class="form-control" id="about" name="about"
                                 placeholder="Awesome Movie" value="{{ old('about') }}">
                         </div>
                         <!-- <div class="form-group">
-                                <label>Featured</label>
-                                <select class="custom-select" name="featured">
-                                    <option value="0" {{ old('featured') === '0' ? 'selected' : '' }}>No</option>
-                                    <option value="1" {{ old('featured') === '1' ? 'selected' : '' }}>Yes</option>
-                                </select>
-                            </div> -->
+                                                                    <label>Featured</label>
+                                                                    <select class="custom-select" name="featured">
+                                                                        <option value="0" >No</option>
+                                                                        <option value="1" >Yes</option>
+                                                                    </select>
+                                                                </div> -->
                     </div>
                     <!-- /.card-body -->
 
@@ -92,4 +93,14 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('js')
+    {{-- <script>
+        $(document).ready(function() {
+            $('#datetimepicker').datetimepicker({
+                format: 'YYYY-MM-DD HH:mm:ss'
+            });
+        });
+    </script> --}}
 @endsection

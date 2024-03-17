@@ -39,7 +39,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h3 class="title-5 m-b-35">data table</h3>
-                        <div class="table-data__tool--lg table-data__flex table-data__flex-lg">
+                        <div class="table-data__tool--lg table-data__flex table-data__flex-lg ">
                             <div class="table-data__tool-left">
                                 <form class="au-form-icon--sm" action="" method="post">
                                     <input class="au-input--w300 au-input--style2" type="text" placeholder="Search Film">
@@ -55,7 +55,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="table-responsive table-responsive-data2">
+                        <div class="table-responsive table-responsive-data2 overflow-xxl-scroll">
                             <table class="table table-data2">
                                 <thead>
                                     <tr>
@@ -73,43 +73,45 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="tr-shadow">
-                                        <td>Transformers Rise Of Beasts</td>
-                                        <td class="desc">
-                                            https://vebriannn.my.id
-                                        </td>
-                                        <td class="desc">https://vebriannn.my.id</td>
-                                        <td>yannsdev</td>
-                                        <td>
-                                            Action, Fantasy, Military
-                                        </td>
-                                        <td>
-                                            transformers.png
-                                        </td>
-                                        <td>
-                                            transformers.png
-                                        </td>
-                                        <td>
-                                            2023-08-24 </td>
-                                        <td>
-                                            welcome to long about
-                                        </td>
-                                        <td>
-                                            1h 38m
-                                        </td>
-                                        <td>
-                                            <div class="table-data-feature d-flex justify-content-start">
-                                                <a href="#" class="item" data-toggle="tooltip" data-placement="top"
-                                                    title="Edit">
-                                                    <i class="zmdi zmdi-edit"></i>
-                                                </a>
-                                                <a href="#" class="item" data-toggle="tooltip" data-placement="top"
-                                                    title="Delete">
-                                                    <i class="zmdi zmdi-delete"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    @foreach ($movies as $movie)
+                                        <tr class="tr-shadow">
+                                            <td>{{ $movie->title }}</td>
+                                            <td class="desc">
+                                                {{ $movie->trailer }}
+                                            </td>
+                                            <td class="desc">{{ $movie->movies }}</td>
+                                            <td>{{ $movie->casts }}</td>
+                                            <td>
+                                                {{ $movie->categories }}
+                                            </td>
+                                            <td>
+                                                {{ $movie->small_thumbnail }}
+                                            </td>
+                                            <td>
+                                                {{ $movie->large_thumbnail }}
+                                            </td>
+                                            <td>
+                                                {{ $movie->release_date }} </td>
+                                            <td>
+                                                {{ $movie->about }}
+                                            </td>
+                                            <td>
+                                                {{ $movie->duration }}
+                                            </td>
+                                            <td>
+                                                <div class="table-data-feature d-flex justify-content-start">
+                                                    <a href="#" class="item" data-toggle="tooltip"
+                                                        data-placement="top" title="Edit">
+                                                        <i class="zmdi zmdi-edit"></i>
+                                                    </a>
+                                                    <a href="#" class="item" data-toggle="tooltip"
+                                                        data-placement="top" title="Delete">
+                                                        <i class="zmdi zmdi-delete"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
