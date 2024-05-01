@@ -78,7 +78,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($users as $user)
+                                        @forelse ($users as $user)
                                             <tr class="tr-shadow">
                                                 <td>{{ $user->name }}</td>
                                                 <td>
@@ -103,18 +103,27 @@
 
                                                 <td>
                                                     <div class="table-data-feature d-flex justify-content-start">
-                                                        <a href="#" class="item" data-toggle="tooltip"
+                                                        <a href="{{route('admin.users.edit', $user->id)}}" class="item" data-toggle="tooltip"
                                                             data-placement="top" title="Edit">
                                                             <i class="zmdi zmdi-edit"></i>
                                                         </a>
-                                                        <a href="#" class="item" data-toggle="tooltip"
-                                                            data-placement="top" title="Delete">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </a>
+                                                        <form action="{{route('admin.users.delete', $user->id)}}" method="POST">
+                                                            @csrf
+                                                            @method("delete")
+                                                            <button type="submit" class="btn item">
+                                                                <i class="zmdi zmdi-delete"></i>
+                                                            </button>
+                                                        </form>
                                                     </div>
                                                 </td>
                                             </tr>
-                                        @endforeach
+                                        @empty
+                                            <tr class="tr-shadow text-center">
+                                                <td colspan="6">
+                                                    Maaf Data Tidak Ada
+                                                </td>
+                                            </tr>
+                                        @endforelse
                                     </tbody>
                                 </table>
                             </div>

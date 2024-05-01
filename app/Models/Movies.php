@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Movies extends Model
 {
     protected $fillable = [
+        'user_id',
+        'type_film',
         'title',
         'trailer',
         'movie',

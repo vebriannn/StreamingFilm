@@ -16,6 +16,8 @@ class Movieseeder extends Seeder
     public function run(): void
     {
         Movies::create([
+            'user_id' => 1,
+            'type_film' => 'free',
             'title' => 'Transformers Rise Of Beasts 2',
             'trailer' => ' https://vebriannn.my.id',
             'movie' => 'https://vebriannn.my.id',

@@ -46,6 +46,7 @@
 
     <!-- Main JS-->
     @yield('scriptJS')
+    @include('sweetalert::alert')
 </body>
 
 </html>

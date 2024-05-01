@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="account-dropdown__body">
                                     <div class="account-dropdown__item">
-                                        <a href="setting.html">
+                                        <a href="{{route('admin.setting')}}">
                                             <i class="zmdi zmdi-settings"></i>Setting</a>
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@
                         </div>
                         <div class="account-dropdown__body">
                             <div class="account-dropdown__item">
-                                <a href="setting.html">
+                                <a href="{{route('admin.setting')}}">
                                     <i class="zmdi zmdi-settings"></i>Setting</a>
                             </div>
                         </div>

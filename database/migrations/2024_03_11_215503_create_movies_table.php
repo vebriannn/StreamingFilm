@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('admin');
+            $table->enum('type_film', ['free', 'premium']);
             $table->string('title');
             $table->string('trailer');
             $table->string('movie');
