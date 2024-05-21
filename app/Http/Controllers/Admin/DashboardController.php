@@ -27,8 +27,13 @@ class DashboardController extends Controller
         return view('admin.index', compact('users', 'totalusers', 'totalperm', 'totalfree'));
     }
 
-    public function showProfile() {
-        return view('admin.setting');
+    public function showProfile(string $id) {
+        $users = Admin::findOrFail($id)->get();
+        return view('admin.setting', compact('users'));
+    }
+
+    public function storeProfile() {
+
     }
 
     /**

@@ -8,6 +8,7 @@ use App\Models\Movies;
 use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 class MoviesController extends Controller
 {
@@ -16,9 +17,11 @@ class MoviesController extends Controller
      */
     public function index()
     {
-        $movies = Movies::all();
-        $moviesfree = Movies::where('type_film', 'free')->count();
-        $moviespremium = Movies::where('type_film', 'premium')->count();
+        $admin = Auth::guard('admin')->user();
+
+        $movies = Movies::where('user_id', $admin->id)->get();
+        $moviesfree = Movies::where('user_id', $admin->id)->where('type_film', 'free')->count();
+        $moviespremium = Movies::where('user_id', $admin->id)->where('type_film', 'premium')->count();
         return view('admin.movies', compact('movies', 'moviesfree', 'moviespremium'));
     }
 

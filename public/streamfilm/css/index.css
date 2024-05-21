@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Poly:ital@0;1&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #2C2121, #346089);
+    height: 100vh;
+}
+
+header .container .navbar-collapse ul li a {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+header .container .navbar-collapse ul:nth-child(2) li h1 {
+    color: white;
+    font-size: 34px;
+    font-weight: 600;
+    font-family: "Jockey One", sans-serif;
+}
+
+header .container .navbar-collapse ul:last-child li a {
+    font-size: 20px;
+    color: #346089;
+    padding: 6px 30px;
+    background-color: white;
+    border-radius: 150px;
+}
+
+header .container .navbar-collapse ul:last-child li a:hover {
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    border-radius: 150px;
+    border: 2px solid white;
+}
+
+header .container .navbar-collapse ul li a.active {
+    color: #346089 !important;
+}
+
+.content .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.content .container p:first-child {
+    font-family: "Poly", sans-serif;
+    font-size: 34px;
+    color: white;
+}
+
+.content .container h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.content .container p {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+}
+
+.content .container a {
+    font-size: 20px;
+    color: #346089;
+    padding: 6px 50px;
+    background-color: white;
+    border-radius: 150px;
+}
+
+.content .container a:hover {
+    font-size: 20px;
+    color: white;
+    padding: 6px 50px;
+    background-color: transparent;
+    border-radius: 150px;
+    border: 2px solid white;
+}

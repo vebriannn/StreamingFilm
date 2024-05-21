@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Member\AuthController;
+use App\Http\Controllers\Member\DashboardMemberController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::view('/', 'admin.index')->name('admin.dashboard');
+Route::view('/', 'index')->name('home');
+Route::get('/login', [AuthController::class, 'index'])->name('member.login');
+Route::post('/login', [AuthController::class, 'auth'])->name('member.login.auth');
+// Route::get('/register', 'member.auth.register')->name('member.register');
 
-// Route::group(['prefix' => 'admin'], function () {
-//     Route::view('/dashboard', 'admin.index')->name('admin.dashboard');
-//     Route::view('/movies', 'admin.movies')->name('admin.movies');
-// });
+Route::group(['prefix' => 'member'], function () {
+    Route::get('/home', [DashboardMemberController::class, 'index'])->name('member.dashboard');
+})->middleware('member.middleware');

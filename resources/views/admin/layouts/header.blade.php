@@ -15,7 +15,7 @@
                                 <img src="{{ asset('storage/profile/yn.jpeg') }}" alt="John Doe" />
                             </div>
                             <div class="content">
-                                <a class="js-acc-btn text-decoration-none text-white" href="#">Vebrian Dev</a>
+                                <a class="js-acc-btn text-decoration-none text-white" href="#">{{Auth::guard('admin')->user()->name}}</a>
                             </div>
                             <div class="account-dropdown js-dropdown">
                                 <div class="info clearfix">
@@ -26,19 +26,19 @@
                                     </div>
                                     <div class="content">
                                         <h5 class="name">
-                                            <a href="#" id="href-icon">Vebrian Dev</a>
+                                            <a href="#" id="href-icon">{{Auth::guard('admin')->user()->name}}</a>
                                         </h5>
-                                        <span class="email">yannsfullstack@example.com</span>
+                                        <span class="email">{{Auth::guard('admin')->user()->email}}</span>
                                     </div>
                                 </div>
                                 <div class="account-dropdown__body">
                                     <div class="account-dropdown__item">
-                                        <a href="{{route('admin.setting')}}">
+                                        <a href="{{route('admin.setting', Auth::guard('admin')->user()->id)}}">
                                             <i class="zmdi zmdi-settings"></i>Setting</a>
                                     </div>
                                 </div>
                                 <div class="account-dropdown__footer">
-                                    <a href="#">
+                                    <a href="{{route('admin.logout')}}">
                                         <i class="zmdi zmdi-power"></i>Logout</a>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
                         <img src="{{ asset('storage/profile/yn.jpeg') }}" alt="John Doe" />
                     </div>
                     <div class="content">
-                        <a class="js-acc-btn text-decoration-none text-white" href="#">Vebrian Dev</a>
+                        <a class="js-acc-btn text-decoration-none text-white" href="#">{{Auth::guard('admin')->user()->name}}</a>
                     </div>
                     <div class="account-dropdown js-dropdown">
                         <div class="info clearfix">
@@ -92,19 +92,19 @@
                             </div>
                             <div class="content">
                                 <h5 class="name">
-                                    <a href="#" id="href-icon">Vebrian Dev</a>
+                                    <a href="#" id="href-icon">{{Auth::guard('admin')->user()->name}}</a>
                                 </h5>
-                                <span class="email">yannsfullstack@example.com</span>
+                                <span class="email">{{Auth::guard('admin')->user()->email}}</span>
                             </div>
                         </div>
                         <div class="account-dropdown__body">
                             <div class="account-dropdown__item">
-                                <a href="{{route('admin.setting')}}">
+                                <a href="{{route('admin.setting', Auth::guard('admin')->user()->id)}}">
                                     <i class="zmdi zmdi-settings"></i>Setting</a>
                             </div>
                         </div>
                         <div class="account-dropdown__footer">
-                            <a href="#">
+                            <a href="{{route('admin.logout')}}">
                                 <i class="zmdi zmdi-power"></i>Logout</a>
                         </div>
                     </div>
