@@ -27,7 +27,7 @@ class AuthController extends Controller
             return redirect()->route('admin.dashboard');
         }
 
-        return back()->with('credentials', 'Email atau password salah');
+        return back()->withErrors('error', 'Email atau password salah')->withInput();
     }
 
     public function logout(Request $request)

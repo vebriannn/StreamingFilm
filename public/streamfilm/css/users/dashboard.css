@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+
+html::-ms-overflow-style {
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+header .container-fluid .navbar-collapse ul li {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+header .container-fluid .navbar-collapse ul li .row label,
+header .container-fluid .navbar-collapse ul li .row input
+{
+    background: none !important;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.placeholder-white::placeholder {
+    color: white;
+    opacity: 1; /* Ensures the color is not affected by the opacity property of the input */
+}
+
+.content .container-fluid .row {
+    height: 100vh;
+}
+
+.content .container-fluid .row .col-md-4  {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.content .container-fluid .row .col-md-4 .sidebar {
+    width: 80%;
+    height: 86%;
+    background: rgba(59, 59, 59, 1);
+    border-radius: 10px;
+}
+
+.content .container-fluid .row .col-md-4 .sidebar .navbar-item .nav-link a {
+    color: white    ;
+}
+
+.content .container-fluid .row .col-md-4 .sidebar .navbar-item .nav-link a.active {
+    color: #FDD212;
+}
+
+.content .container-fluid .row .col-md-8 .content-film {
+    width: 100%;
+    height: 86%;
+    /* background: rgba(59, 59, 59, 1); */
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.content .container-fluid .row .col-md-8 .content-film .list-film .owl-carousel .owl-stage-outer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content .container-fluid .row .col-md-8 .content-film .list-film .owl-carousel .owl-stage {
+    width: 100% !important;
+    display: flex;
+}
+
+.content .container-fluid .row .col-md-8 .content-film .list-film .owl-carousel .owl-item  {
+    width: max-content !important;
+}
+
+.content .container-fluid .row .col-md-8 .content-film .list-film .owl-carousel .owl-item .item {
+    width: 250px !important;
+    height: auto;
+}
+
+
+
+
+.bg-rgb {
+    background-color: rgb(229, 229, 229, 0.24);
+}
+
+
+

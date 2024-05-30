@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\User;
 use App\Models\Admin;
@@ -27,38 +28,6 @@ class DashboardController extends Controller
         return view('admin.index', compact('users', 'totalusers', 'totalperm', 'totalfree'));
     }
 
-    public function showProfile(string $id) {
-        $users = Admin::findOrFail($id)->get();
-        return view('admin.setting', compact('users'));
-    }
-
-    public function storeProfile() {
-
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $requests)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.

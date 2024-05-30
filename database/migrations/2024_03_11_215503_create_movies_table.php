@@ -15,14 +15,13 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('admin');
-            $table->enum('type_film', ['free', 'premium']);
+            $table->enum('type_film', ['free', 'premium', 'standard']);
             $table->string('title');
-            $table->string('trailer');
             $table->string('movie');
             $table->string('casts');
             $table->string('categories');
-            $table->string('small_thumbnail');
-            $table->string('large_thumbnail');
+            $table->string('thumbnail');
+            $table->string('ranting');
             $table->date('release_date');
             $table->text('about');
             $table->string('duration');

@@ -20,6 +20,12 @@ class MoviesController extends Controller
         $admin = Auth::guard('admin')->user();
 
         $movies = Movies::where('user_id', $admin->id)->get();
+
+        // ubah text supaya tidak panjang
+        foreach ($movies as $movie) {
+            $movie['about'] = Str::words($movie->about, 10, '......');
+        }
+
         $moviesfree = Movies::where('user_id', $admin->id)->where('type_film', 'free')->count();
         $moviespremium = Movies::where('user_id', $admin->id)->where('type_film', 'premium')->count();
         return view('admin.movies', compact('movies', 'moviesfree', 'moviespremium'));
@@ -44,46 +50,39 @@ class MoviesController extends Controller
         $requests->validate([
             'type_film' => 'required|string',
             'title' => 'required|string',
-            'trailer' => 'required|url',
             'movie' => 'required|url',
             'casts' => 'required|string',
             'categories' => 'required|string',
-            'small_thumbnail' => 'required|image|mimes:jpeg,jpg,png',
-            'large_thumbnail' => 'required|image|mimes:jpeg,jpg,png',
+            'thumbnail' => 'required|image|mimes:jpeg,jpg,png',
+            'ranting' => 'required|string',
             'release_date' => 'required|date',
             'duration' => 'required|string',
             'about' => 'required|string',
         ]);
 
-        $smallThumbnail = $requests->small_thumbnail;
-        $largeThumbnail = $requests->large_thumbnail;
+        $Thumbnail = $requests->thumbnail;
 
         // Str::random(10) berfungsi untuk random string
         // $smallThumbnail->getClientOriginalName() Mengambil nama file
-        $originalSmallThumbnailName = Str::random(10).$smallThumbnail->getClientOriginalName();
-        $originalLargeThumbnailName = Str::random(10).$largeThumbnail->getClientOriginalName();
-
+        $originalThumbnailName = Str::random(10).$Thumbnail->getClientOriginalName();
         // menyimpan img
-        $smallThumbnail->storeAs('public/movies', $originalSmallThumbnailName);
-        $largeThumbnail->storeAs('public/movies', $originalLargeThumbnailName);
+        $Thumbnail->storeAs('public/movies', $originalThumbnailName);
 
 
-        $data['small_thumbnail'] = $originalSmallThumbnailName;
-        $data['large_thumbnail'] = $originalLargeThumbnailName;
+        $data['thumbnail'] = $originalThumbnailName;
 
         //  menampilkan data
         // dd($data);
 
         Movies::create([
-            'user_id' => 1,
+            'user_id' => Auth::guard('admin')->user()->id,
             'type_film' => $requests->type_film,
             'title' => $requests->title,
-            'trailer' => $requests->trailer,
             'movie' => $requests->movie,
             'casts' => $requests->casts,
             'categories' => $requests->categories,
-            'small_thumbnail' => $originalSmallThumbnailName,
-            'large_thumbnail' => $originalLargeThumbnailName,
+            'thumbnail' => $originalThumbnailName,
+            'ranting' => $requests->ranting,
             'release_date' => date('Y-m-d', strtotime($requests->release_date)),
             'duration' => $requests->duration,
             'about' => $requests->about
@@ -106,7 +105,7 @@ class MoviesController extends Controller
      */
     public function edit(string $id)
     {
-        $movies = Movies::find($id)->get();
+        $movies = Movies::where('id', $id)->first();
         return view('admin.crud.movies.edit', compact('movies'));
     }
 
@@ -121,10 +120,10 @@ class MoviesController extends Controller
         $requests->validate([
             'type_film' => 'required|string',
             'title' => 'required|string',
-            'trailer' => 'required|url',
             'movie' => 'required|url',
             'casts' => 'required|string',
             'categories' => 'required|string',
+            'ranting' => 'required|string',
             'release_date' => 'required|date',
             'duration' => 'required|string',
             'about' => 'required|string',
@@ -132,27 +131,15 @@ class MoviesController extends Controller
 
         $movies = Movies::find($id);
 
-        if ($requests->small_thumbnail) {
-
-            // save new images
-            $smallThumbnail = $requests->small_thumbnail;
-            $originalSmallThumbnailName = Str::random(10).$smallThumbnail->getClientOriginalName();
-            $smallThumbnail->storeAs('public/movies', $originalSmallThumbnailName);
-            $data['small_thumbnail'] = $originalSmallThumbnailName;
-
-            // delete old img
-            Storage::disk('public')->delete('movies/'.$movies->small_thumbnail);
-        }
-
-        if ($requests->large_thumbnail) {
+        if ($requests->thumbnail) {
             // save new img
-            $largeThumbnail = $requests->large_thumbnail;
-            $originalLargeThumbnailName = Str::random(10).$largeThumbnail->getClientOriginalName();
-            $largeThumbnail->storeAs('public/movies', $originalLargeThumbnailName);
-            $data['large_thumbnail'] = $originalLargeThumbnailName;
+            $Thumbnail = $requests->thumbnail;
+            $originalThumbnailName = Str::random(10).$Thumbnail->getClientOriginalName();
+            $Thumbnail->storeAs('public/movies', $originalThumbnailName);
+            $data['thumbnail'] = $originalLargeThumbnailName;
 
             // delete old img
-            Storage::disk('public')->delete('movies/'.$movies->large_thumbnail);
+            Storage::disk('public')->delete('movies/'.$movies->thumbnail);
         }
 
         $movies->update($data);
@@ -168,12 +155,11 @@ class MoviesController extends Controller
     public function destroy(string $id)
     {
         $localfile = Movies::find($id)->get()->first();
-        // lokasi file
-        $small = 'movies/'.$localfile->small_thumbnail;
-        $large = 'movies/'.$localfile->large_thumbnail;
+
+        $thumbnail = 'movies/'.$localfile->thumbnail;
 
         // hapus images
-        Storage::disk('public')->delete([$small, $large]);
+        Storage::disk('public')->delete($thumbnail);
         // delete data from db
         Movies::find($id)->delete();
 

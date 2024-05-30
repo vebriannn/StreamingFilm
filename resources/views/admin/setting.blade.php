@@ -4,9 +4,17 @@
 
 @section('content')
     <div class="page-wrapper">
-        <header class="header-desktop3 position-fixed w-100 ">
+        @error('email')
+            <div class="alert alert-danger alert-dismissible fade show position-fixed w-100 " role="alert" style="z-index: 999;">
+                <p>
+                    {{ $message }}
+                </p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @enderror
+        <header class="header-desktop3 position-fixed w-100 " style="z-index: -999;">
             <div class="container-fluid d-flex justify-content-between">
-                <a href="{{route('admin.dashboard')}}" style="text-decoration: none; color: white; font-size: 28px;"><i
+                <a href="{{ route('admin.dashboard') }}" style="text-decoration: none; color: white; font-size: 28px;"><i
                         class="bi bi-arrow-left-circle"></i></a>
             </div>
         </header>
@@ -16,15 +24,18 @@
                 <div class="col-lg-10">
                     <div class="card">
                         @foreach ($users as $user)
-                            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                            <form action="{{ route('admin.setting.updated', $user->id) }}" method="post"
+                                enctype="multipart/form-data" class="form-horizontal">
+                                @csrf
                                 <div class="card-header d-flex justify-content">
                                     <div class="image" style="width: 80px; height: auto;">
                                         <img src="{{ asset('storage/profile/yn.jpeg') }}" alt="Profil"
                                             style="border-radius: 100%;" />
                                     </div>
-                                    <div class="content " style="display: flex; flex-direction: column; justify-content: center; margin-left: 1rem;">
-                                        <h1 style="font-size: 20px;">{{ $user->name}}</h1>
-                                        <p>{{ $user->email}}</p>
+                                    <div class="content "
+                                        style="display: flex; flex-direction: column; justify-content: center; margin-left: 1rem;">
+                                        <h1 style="font-size: 20px;">{{ $user->name }}</h1>
+                                        <p>{{ $user->email }}</p>
                                     </div>
                                 </div>
                                 <div class="card-body card-block">
@@ -33,8 +44,9 @@
                                             <label for="text-input" class=" form-control-label">Nama Anda</label>
                                         </div>
                                         <div class="col-12 col-md-9 mb-2">
-                                            <input type="text" id="text-input" name="text-input"
-                                                placeholder="yannsfullstack" class="form-control" value="{{ $user->name}}">
+                                            <input type="text" id="text-input" name="name"
+                                                placeholder="yannsfullstack" class="form-control"
+                                                value="{{ $user->name }}">
                                             <small class="form-text text-muted">Masukan nama anda ke field di atas
                                                 ini</small>
                                         </div>
@@ -44,9 +56,9 @@
                                             <label for="email-input" class=" form-control-label">Email Anda</label>
                                         </div>
                                         <div class="col-12 col-md-9">
-                                            <input type="email" id="email-input" name="email-input"
+                                            <input type="email" id="email-input" name="email"
                                                 placeholder="yncodes@gmail.com" class="form-control"
-                                                value="{{ $user->email}}">
+                                                value="{{ $user->email }}">
                                             <small class="help-block form-text">Masukan email anda ke field di atas
                                                 ini</small>
                                         </div>
@@ -56,7 +68,7 @@
                                             <label for="password-input" class=" form-control-label">Ubah Password</label>
                                         </div>
                                         <div class="col-12 col-md-9">
-                                            <input type="password" id="password-input" name="password-input" placeholder=""
+                                            <input type="password" id="password-input" name="password" placeholder=""
                                                 class="form-control">
                                             <small class="help-block form-text">Masukan password baru anda ke field di atas
                                                 ini</small>

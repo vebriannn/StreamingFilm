@@ -23,7 +23,7 @@
 </head>
 
 <body class="bg-gradient-primary">
-    @error('credentials')
+    @error('error')
         <div class="text-white bg-danger pt-3 pb-3" style="display: flex; justify-content: center; align-items: center;">
             {{ $message }}</div>
     @enderror

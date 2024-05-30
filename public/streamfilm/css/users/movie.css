@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+header .container-fluid .navbar-collapse ul li a {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+header .container-fluid .navbar-collapse ul:nth-child(2) li h1 {
+    color: white;
+    font-size: 34px;
+    font-weight: 600;
+    font-family: "Jockey One", sans-serif;
+}
+
+header .container-fluid .navbar-collapse ul:last-child li a {
+    font-size: 16px;
+    color: #FDD212;
+    padding: 6px 30px;
+    background-color: white;
+    border-radius: 150px;
+    border: 2px solid white;
+}
+
+header .container-fluid .navbar-collapse ul:last-child li a:hover {
+    color: white;
+    background-color: transparent;
+    border-radius: 150px;
+}
+
+header .container-fluid .navbar-collapse ul li a.active {
+    color: #FDD212!important;
+}
+
+.content {
+    height: max-content;
+}
+
+.content .container-fluid .main-hero {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content .container-fluid .main-hero .col-md-6 {
+    padding-top: 8rem;
+}
+
+.content .container-fluid .main-hero .col-md-6 h1 {
+    color: #FDD212;
+    font-size: 24px;
+}
+
+.content .container-fluid .main-hero .col-md-6 h2 {
+    color: white;
+    font-size: 50px;
+}
+
+.content .container-fluid .main-hero .col-md-6 .subtitle p:first-child {
+    padding: 4px;
+    color: black;
+    background: rgba(217, 217, 217, 1);
+}
+
+.content .container-fluid .main-hero .col-md-6 .subtitle p:nth-child(2) {
+    padding: 4px 10px;
+    color: black;
+    background: rgba(217, 217, 217, 0.31);
+
+}
+
+.content .container-fluid .main-hero .col-md-6 .btn {
+    background: rgba(0, 0, 0, 0.3);
+    width: max-content;
+    padding: 12px 30px;
+    border-radius: 40px;
+}
+
+.content .container-fluid .main-hero .col-md-6 .btn a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.bg-rgb {
+    background-color: rgb(229, 229, 229, 0.24);
+}
+
+.content .container-fluid .view-film {
+    width: 100%;
+    height: max-content;
+    background-color: #000000D6;
+    margin-top: -10px;
+    padding-bottom: 80px !important;
+}
+
+.content .container-fluid .view-film .col-md-12 h1 {
+    padding-top: 80px;
+    color: #FDD212;
+}
+
+.content .container-fluid .view-film .col-md-12 .list-film .owl-carousel .owl-stage-outer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content .container-fluid .view-film .col-md-12 .list-film .owl-carousel .owl-stage {
+    width: 100% !important;
+}
+
+.content .container-fluid .view-film .col-md-12 .list-film .owl-carousel .owl-item  {
+    width: max-content !important;
+}
+
+.content .container-fluid .view-film .col-md-12 .list-film .owl-carousel .owl-item .item {
+    width: 300px !important;
+}
+
+
+

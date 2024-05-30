@@ -14,38 +14,38 @@ body {
     height: 100vh;
 }
 
-header .container .navbar-collapse ul li a {
-    font-size: 20px;
+header .container-fluid .navbar-collapse ul li a {
+    font-size: 16px;
     font-weight: 600;
     color: white;
 }
 
-header .container .navbar-collapse ul:nth-child(2) li h1 {
+header .container-fluid .navbar-collapse ul:nth-child(2) li h1 {
     color: white;
     font-size: 34px;
     font-weight: 600;
     font-family: "Jockey One", sans-serif;
 }
 
-header .container .navbar-collapse ul:last-child li a {
-    font-size: 20px;
-    color: #346089;
+header .container-fluid .navbar-collapse ul:last-child li a {
+    font-size: 16px;
+    color: #346089 ;
     padding: 6px 30px;
     background-color: white;
-    border-radius: 150px;
-}
-
-header .container .navbar-collapse ul:last-child li a:hover {
-    font-size: 20px;
-    color: white;
-    background-color: transparent;
     border-radius: 150px;
     border: 2px solid white;
 }
 
-header .container .navbar-collapse ul li a.active {
+header .container-fluid .navbar-collapse ul:last-child li a:hover {
+    color: white;
+    background-color: transparent;
+    border-radius: 150px;
+}
+
+header .container-fluid .navbar-collapse ul li a.active {
     color: #346089 !important;
 }
+
 
 .content .container {
     display: flex;
@@ -90,4 +90,8 @@ header .container .navbar-collapse ul li a.active {
     background-color: transparent;
     border-radius: 150px;
     border: 2px solid white;
+}
+
+.bg-rgb {
+    background-color: rgb(229, 229, 229, 0.24);
 }

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MoviesController;
+use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\Alert;
 
@@ -17,7 +18,8 @@ Route::post('/login', [AuthController::class, 'auth'])->name('admin.login.auth')
 
 Route::middleware(['admin.middleware'])->group(function () {
     // admin pages setting profile
-    Route::get('/profile/setting/{id}', [DashboardController::class, 'showProfile'])->name('admin.setting');
+    Route::get('/profile/setting/{id}', [SettingController::class, 'index'])->name('admin.setting');
+    Route::post('/profile/setting/updated/{id}', [SettingController::class, 'updated'])->name('admin.setting.updated');
 
     // admin logout
     Route::get('/logout', [AuthController::class, 'logout'])->name('admin.logout');

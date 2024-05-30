@@ -29,14 +29,6 @@
                             @enderror
                         </div>
                         <div class="form-group mt-3">
-                            <label for="trailer">Trailer</label>
-                            <input type="text" class="form-control" id="trailer" name="trailer" placeholder="Video url"
-                                value="{{ old('trailer') }}">
-                            @error('trailer')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-                        <div class="form-group mt-3">
                             <label for="movie">Movie </label>
                             <input type="text" class="form-control" id="movie" name="movie" placeholder="Movie"
                                 value="{{ old('movie') }}">
@@ -61,16 +53,16 @@
                             @enderror
                         </div>
                         <div class="form-group mt-3">
-                            <label for="small-thumbnail">Small Thumbnail</label>
-                            <input type="file" class="form-control" id="large_thumbail" name="small_thumbnail">
-                            @error('small_thumbnail')
+                            <label for="small-thumbnail">Thumbnail</label>
+                            <input type="file" class="form-control" id="large_thumbail" name="thumbnail">
+                            @error('thumbnail')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group mt-3">
-                            <label for="large-thumbnail">Large Thumbnail</label>
-                            <input type="file" class="form-control" id="large_thumbail" name="large_thumbnail">
-                            @error('large_thumbnail')
+                            <label for="">ranting</label>
+                            <input type="text" class="form-control" id="" name="ranting">
+                            @error('ranting')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>

@@ -15,7 +15,8 @@
                                 <img src="{{ asset('storage/profile/yn.jpeg') }}" alt="John Doe" />
                             </div>
                             <div class="content">
-                                <a class="js-acc-btn text-decoration-none text-white" href="#">{{Auth::guard('admin')->user()->name}}</a>
+                                <a class="js-acc-btn text-decoration-none text-white"
+                                    href="#">{{ Auth::guard('admin')->user()->name }}</a>
                             </div>
                             <div class="account-dropdown js-dropdown">
                                 <div class="info clearfix">
@@ -26,19 +27,20 @@
                                     </div>
                                     <div class="content">
                                         <h5 class="name">
-                                            <a href="#" id="href-icon">{{Auth::guard('admin')->user()->name}}</a>
+                                            <a href="#"
+                                                id="href-icon">{{ Auth::guard('admin')->user()->name }}</a>
                                         </h5>
-                                        <span class="email">{{Auth::guard('admin')->user()->email}}</span>
+                                        <span class="email">{{ Auth::guard('admin')->user()->email }}</span>
                                     </div>
                                 </div>
                                 <div class="account-dropdown__body">
                                     <div class="account-dropdown__item">
-                                        <a href="{{route('admin.setting', Auth::guard('admin')->user()->id)}}">
+                                        <a href="{{ route('admin.setting', Auth::guard('admin')->user()->id) }}">
                                             <i class="zmdi zmdi-settings"></i>Setting</a>
                                     </div>
                                 </div>
                                 <div class="account-dropdown__footer">
-                                    <a href="{{route('admin.logout')}}">
+                                    <a href="{{ route('admin.logout') }}">
                                         <i class="zmdi zmdi-power"></i>Logout</a>
                                 </div>
                             </div>
@@ -62,10 +64,10 @@
                         href="{{ route('admin.dashboard') }}">
                         <i class="bi bi-house-dash"></i> Dashboard
                     </a>
-                    <a class="js-arrow w-100 pt-2 {{ request()->is('admin/transaction') ? 'active' : '' }}"
+                    {{-- <a class="js-arrow w-100 pt-2 {{ request()->is('admin/transaction') ? 'active' : '' }}"
                         href="#">
                         <i class="bi bi-wallet"></i>Transaksi
-                    </a>
+                    </a> --}}
                     <a class="js-arrow w-100 pt-2 {{ request()->is('admin/movies') ? 'active' : '' }}"
                         href="{{ route('admin.movies') }}">
                         <i class="bi bi-pencil-square"></i> Movies
@@ -81,7 +83,8 @@
                         <img src="{{ asset('storage/profile/yn.jpeg') }}" alt="John Doe" />
                     </div>
                     <div class="content">
-                        <a class="js-acc-btn text-decoration-none text-white" href="#">{{Auth::guard('admin')->user()->name}}</a>
+                        <a class="js-acc-btn text-decoration-none text-white"
+                            href="#">{{ Auth::guard('admin')->user()->name }}</a>
                     </div>
                     <div class="account-dropdown js-dropdown">
                         <div class="info clearfix">
@@ -92,19 +95,19 @@
                             </div>
                             <div class="content">
                                 <h5 class="name">
-                                    <a href="#" id="href-icon">{{Auth::guard('admin')->user()->name}}</a>
+                                    <a href="#" id="href-icon">{{ Auth::guard('admin')->user()->name }}</a>
                                 </h5>
-                                <span class="email">{{Auth::guard('admin')->user()->email}}</span>
+                                <span class="email">{{ Auth::guard('admin')->user()->email }}</span>
                             </div>
                         </div>
                         <div class="account-dropdown__body">
                             <div class="account-dropdown__item">
-                                <a href="{{route('admin.setting', Auth::guard('admin')->user()->id)}}">
+                                <a href="{{ route('admin.setting', Auth::guard('admin')->user()->id) }}">
                                     <i class="zmdi zmdi-settings"></i>Setting</a>
                             </div>
                         </div>
                         <div class="account-dropdown__footer">
-                            <a href="{{route('admin.logout')}}">
+                            <a href="{{ route('admin.logout') }}">
                                 <i class="zmdi zmdi-power"></i>Logout</a>
                         </div>
                     </div>

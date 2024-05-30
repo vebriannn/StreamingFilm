@@ -61,12 +61,11 @@
                                     <tr>
                                         <th>type film</th>
                                         <th>title</th>
-                                        <th>trailer</th>
                                         <th>movies</th>
                                         <th>casts</th>
                                         <th>categories</th>
-                                        <th>small thumbnail</th>
-                                        <th>large thumbnail</th>
+                                        <th>thumbnail</th>
+                                        <th>ranting</th>
                                         <th>release date</th>
                                         <th>about</th>
                                         <th>duration</th>
@@ -78,19 +77,16 @@
                                         <tr class="tr-shadow">
                                             <td>{{ $movie->type_film }}</td>
                                             <td>{{ $movie->title }}</td>
-                                            <td class="desc">
-                                                {{ $movie->trailer }}
-                                            </td>
                                             <td class="desc">{{ $movie->movie }}</td>
                                             <td>{{ $movie->casts }}</td>
                                             <td>
                                                 {{ $movie->categories }}
                                             </td>
                                             <td>
-                                                {{ $movie->small_thumbnail }}
+                                                {{ $movie->thumbnail }}
                                             </td>
                                             <td>
-                                                {{ $movie->large_thumbnail }}
+                                                {{ $movie->ranting }}
                                             </td>
                                             <td>
                                                 {{ $movie->release_date }} </td>
