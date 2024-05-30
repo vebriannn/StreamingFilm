@@ -18,3 +18,6 @@
 ### Screenshot Admin
 
 ![template_s](https://github.com/vebriannn/StreamingFilm/blob/main/screenshot/admin/ss%20admin/login.png)
+![template_s](https://github.com/vebriannn/StreamingFilm/blob/main/screenshot/admin/ss%20admin/dashboard.png)
+![template_s](https://github.com/vebriannn/StreamingFilm/blob/main/screenshot/admin/ss%20admin/movies.png)
+![template_s](https://github.com/vebriannn/StreamingFilm/blob/main/screenshot/admin/ss%20admin/setting.png)
