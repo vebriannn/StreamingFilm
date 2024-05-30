@@ -16,8 +16,30 @@
 - Laravel
 
 ### Screenshot Admin
-
+- Login
 ![template_s](https://github.com/vebriannn/StreamingFilm/blob/main/screenshot/admin/ss%20admin/login.png)
+- Dashboard
 ![template_s](https://github.com/vebriannn/StreamingFilm/blob/main/screenshot/admin/ss%20admin/dashboard.png)
+- Movies
 ![template_s](https://github.com/vebriannn/StreamingFilm/blob/main/screenshot/admin/ss%20admin/movies.png)
+- Setting
 ![template_s](https://github.com/vebriannn/StreamingFilm/blob/main/screenshot/admin/ss%20admin/setting.png)
+
+### Screenshot Users
+- Register
+![template_s](https://github.com/vebriannn/StreamingFilm/blob/main/screenshot/admin/users/ss%20user/reg.png)
+- Login
+![template_s](https://github.com/vebriannn/StreamingFilm/blob/main/screenshot/admin/users/ss%20user/log.png)
+- Dashboard
+![template_s](https://github.com/vebriannn/StreamingFilm/blob/main/screenshot/admin/users/ss%20user/db.png)
+- View Film
+![template_s](https://github.com/vebriannn/StreamingFilm/blob/main/screenshot/admin/users/ss%20user/tonton.png)
+
+### Bonus
+- HomePage
+![template_s](https://github.com/vebriannn/StreamingFilm/blob/main/screenshot/admin/users/ss%20user/homepage.png)
+- Movies
+![template_s](https://github.com/vebriannn/StreamingFilm/blob/main/screenshot/admin/users/ss%20user/movies.png)
+- Pricing
+![template_s](https://github.com/vebriannn/StreamingFilm/blob/main/screenshot/admin/users/ss%20user/pricing.png)
+
