@@ -12,5 +12,5 @@
 2. masih banyak beberapa bug, contoh seperti login, register pada users yang notif error tidak keluar)
 3. Kurang Responsif
    
-### FrameWork 
+### Framework 
 - Laravel
