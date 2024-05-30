@@ -114,7 +114,7 @@
                                                 style="background: none !important; border: none !important;">
                                                 <div class="card-header ps-0" style="border: none !important;">
                                                     <a href="#">
-                                                        <img src="{{ asset('storage/movies/' . $movieP->thumbnail) }}"
+                                                        <img style="height: 150px !important;" src="{{ asset('storage/movies/' . $movieP->thumbnail) }}"
                                                             alt="" srcset="">
                                                     </a>
                                                 </div>
@@ -189,7 +189,7 @@
                                                 style="background: none !important; border: none !important;">
                                                 <div class="card-header ps-0" style="border: none !important;">
                                                     <a href="#">
-                                                        <img src="{{ asset('storage/movies/' . $movies->thumbnail) }}"
+                                                        <img style="height: 150px !important;" src="{{ asset('storage/movies/' . $movies->thumbnail) }}"
                                                             alt="" srcset="">
                                                     </a>
                                                 </div>
@@ -280,7 +280,7 @@
         });
 
         $('.owl-carousel').owlCarousel({
-            loop: true,
+            autoWidth:true,
             margin: 10,
             responsiveClass: true,
             responsive: {

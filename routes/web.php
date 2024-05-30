@@ -24,7 +24,6 @@ Route::get('/login', [AuthController::class, 'index'])->name('member.login');
 Route::post('/login', [AuthController::class, 'auth'])->name('member.login.auth');
 Route::get('/register', [AuthController::class, 'register'])->name('member.register');
 Route::post('/register', [AuthController::class, 'regStore'])->name('member.register.store');
-// Route::get('/register', 'member.auth.register')->name('member.register');
 
 Route::group(['prefix' => 'member', 'middleware' => 'member.middleware'], function () {
     Route::get('/dashboard', [DashboardMemberController::class, 'index'])->name('member.dashboard');

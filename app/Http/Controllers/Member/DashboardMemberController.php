@@ -14,7 +14,7 @@ use App\Models\Movies;
 class DashboardMemberController extends Controller
 {
     public function index() {
-        $moviesP = Movies::orderBy('ranting', 'desc')->limit(2)->get();
+        $moviesP = Movies::orderBy('ranting', 'desc')->limit(3)->get();
         $moviesL = Movies::all();
         return view('member.dashboard', compact('moviesP', 'moviesL'));
 
@@ -23,7 +23,10 @@ class DashboardMemberController extends Controller
     public function showFilm(string $id) {
         $movies = Movies::where('id', $id)->first();
 
-        if(Auth::user()->role == $movies->type_film || Auth::user()->role == "standart") {
+        if(Auth::user()->role != "free") {
+            return view('member.view', compact('movies'));
+        }
+        else if($movies->type_film == "free") {
             return view('member.view', compact('movies'));
         }
         else {

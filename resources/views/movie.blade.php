@@ -3,15 +3,15 @@
 @section('title', 'Movies')
 
 @section('css')
-    <link rel="stylesheet" href="{{asset('streamfilm/dist/assets/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('streamfilm/dist/assets/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" href="{{asset('streamfilm/css/users/movie.css')}}">
+    <link rel="stylesheet" href="{{ asset('streamfilm/dist/assets/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('streamfilm/dist/assets/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('streamfilm/css/users/movie.css') }}">
 @endsection
 
 @section('content')
     <div class="content">
         <div class="container-fluid p-0">
-            <div class="main-hero" style="background-image: url({{asset('streamfilm/images/bgspider.png')}});">
+            <div class="main-hero" style="background-image: url({{ asset('streamfilm/images/bgspider.png') }});">
                 <div class="col-md-6 d-flex justify-content-center flex-column px-5">
                     <h1 class="mb-0">StreamingFilm</h1>
                     <h2>Nonton Film, Bioskop, &
@@ -71,7 +71,8 @@
                                 <div class="card" style="background: none !important; border: none !important;">
                                     <div class="card-header">
                                         <a href="#">
-                                            <img src="https://m.media-amazon.com/images/I/812ChIchw9L._SY425_.jpg"
+                                            <img style="height: 350px"
+                                                src="https://m.media-amazon.com/images/I/812ChIchw9L._SY425_.jpg"
                                                 alt="" srcset="">
                                         </a>
                                     </div>
@@ -100,7 +101,8 @@
                                             </p>
                                         </div>
                                         <div class="footer-deskripsi mt-4">
-                                            <a href="{{route('member.dashboard')}}" class="btn btn-primary text-center w-100 fw-bold"
+                                            <a href="{{ route('member.dashboard') }}"
+                                                class="btn btn-primary text-center w-100 fw-bold"
                                                 style="background-color: #FDD212 !important; border: none; ">Tonton
                                                 Sekarang</a>
                                         </div>
@@ -108,14 +110,132 @@
                                 </div>
                             </div>
                             <div class="item">
-
+                                <div class="card" style="background: none !important; border: none !important;">
+                                    <div class="card-header">
+                                        <a href="#">
+                                            <img style="height: 350px"
+                                                src="https://play-lh.googleusercontent.com/proxy/Z7zN0cXkNKG9lpSVPI63QiY_U0M7RpuurB0xvpsIPnw5KImziTRf9sb4UUJr9zRsFcJFNkyXW4R5a7qdBOuU4ocdSVm2zrZNDRfilLPlIDECCUiZETAWZaQ28s65nXiTbjjEEUhjn_SMOi9KqQ1DnIi-FmL8V3UW-inwig=w240-h480-rw"
+                                                alt="" srcset="">
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="head-deskripsi d-flex justify-content-between align-items-center">
+                                            <h1 class="title text-white p-0 fw-bold text-start fs-5">Crows Zero</h1>
+                                            <h2 class="text-white fw-bold text-end text-black fs-5">2019</h2>
+                                        </div>
+                                        <div class="body-deskripsi d-flex justify-content-end align-items-center">
+                                            <p class="text-white m-0 fs-6 fw-bold">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                    viewBox="0 0 24 24" style="fill: #FDD212;">
+                                                    <path
+                                                        d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z">
+                                                    </path>
+                                                    <path d="M13 7h-2v5.414l3.293 3.293 1.414-1.414L13 11.586z"></path>
+                                                </svg> 120Min
+                                            </p>
+                                            <p class="text-white m-0 fs-6 fw-bold ms-2"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                    viewBox="0 0 24 24" style="fill: #FDD212;">
+                                                    <path
+                                                        d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z">
+                                                    </path>
+                                                </svg> 6,7
+                                            </p>
+                                        </div>
+                                        <div class="footer-deskripsi mt-4">
+                                            <a href="{{ route('member.dashboard') }}"
+                                                class="btn btn-primary text-center w-100 fw-bold"
+                                                style="background-color: #FDD212 !important; border: none; ">Tonton
+                                                Sekarang</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="item">
-
+                                <div class="card" style="background: none !important; border: none !important;">
+                                    <div class="card-header">
+                                        <a href="#">
+                                            <img style="height: 350px"
+                                                src="https://m.media-amazon.com/images/I/812ChIchw9L._SY425_.jpg"
+                                                alt="" srcset="">
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="head-deskripsi d-flex justify-content-between align-items-center">
+                                            <h1 class="title text-white p-0 fw-bold text-start fs-5">Damsel</h1>
+                                            <h2 class="text-white fw-bold text-end text-black fs-5">2024</h2>
+                                        </div>
+                                        <div class="body-deskripsi d-flex justify-content-end align-items-center">
+                                            <p class="text-white m-0 fs-6 fw-bold">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                    viewBox="0 0 24 24" style="fill: #FDD212;">
+                                                    <path
+                                                        d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z">
+                                                    </path>
+                                                    <path d="M13 7h-2v5.414l3.293 3.293 1.414-1.414L13 11.586z"></path>
+                                                </svg> 140Min
+                                            </p>
+                                            <p class="text-white m-0 fs-6 fw-bold ms-2"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                    viewBox="0 0 24 24" style="fill: #FDD212;">
+                                                    <path
+                                                        d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z">
+                                                    </path>
+                                                </svg> 8,8
+                                            </p>
+                                        </div>
+                                        <div class="footer-deskripsi mt-4">
+                                            <a href="{{ route('member.dashboard') }}"
+                                                class="btn btn-primary text-center w-100 fw-bold"
+                                                style="background-color: #FDD212 !important; border: none; ">Tonton
+                                                Sekarang</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="item">
-
+                                <div class="card" style="background: none !important; border: none !important;">
+                                    <div class="card-header">
+                                        <a href="#">
+                                            <img style="height: 350px"
+                                                src="https://play-lh.googleusercontent.com/proxy/Z7zN0cXkNKG9lpSVPI63QiY_U0M7RpuurB0xvpsIPnw5KImziTRf9sb4UUJr9zRsFcJFNkyXW4R5a7qdBOuU4ocdSVm2zrZNDRfilLPlIDECCUiZETAWZaQ28s65nXiTbjjEEUhjn_SMOi9KqQ1DnIi-FmL8V3UW-inwig=w240-h480-rw"
+                                                alt="" srcset="">
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="head-deskripsi d-flex justify-content-between align-items-center">
+                                            <h1 class="title text-white p-0 fw-bold text-start fs-5">Crows Zero</h1>
+                                            <h2 class="text-white fw-bold text-end text-black fs-5">2019</h2>
+                                        </div>
+                                        <div class="body-deskripsi d-flex justify-content-end align-items-center">
+                                            <p class="text-white m-0 fs-6 fw-bold">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                    viewBox="0 0 24 24" style="fill: #FDD212;">
+                                                    <path
+                                                        d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z">
+                                                    </path>
+                                                    <path d="M13 7h-2v5.414l3.293 3.293 1.414-1.414L13 11.586z"></path>
+                                                </svg> 120Min
+                                            </p>
+                                            <p class="text-white m-0 fs-6 fw-bold ms-2"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                    viewBox="0 0 24 24" style="fill: #FDD212;">
+                                                    <path
+                                                        d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z">
+                                                    </path>
+                                                </svg> 6,7
+                                            </p>
+                                        </div>
+                                        <div class="footer-deskripsi mt-4">
+                                            <a href="{{ route('member.dashboard') }}"
+                                                class="btn btn-primary text-center w-100 fw-bold"
+                                                style="background-color: #FDD212 !important; border: none; ">Tonton
+                                                Sekarang</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -133,7 +253,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="{{asset('streamfilm/dist/owl.carousel.min.js')}}"></script>
+    <script src="{{ asset('streamfilm/dist/owl.carousel.min.js') }}"></script>
     <script>
         $(document).ready(function() {
             $(".owl-carousel").owlCarousel();

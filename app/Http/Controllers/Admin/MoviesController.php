@@ -136,7 +136,7 @@ class MoviesController extends Controller
             $Thumbnail = $requests->thumbnail;
             $originalThumbnailName = Str::random(10).$Thumbnail->getClientOriginalName();
             $Thumbnail->storeAs('public/movies', $originalThumbnailName);
-            $data['thumbnail'] = $originalLargeThumbnailName;
+            $data['thumbnail'] = $originalThumbnailName;
 
             // delete old img
             Storage::disk('public')->delete('movies/'.$movies->thumbnail);
